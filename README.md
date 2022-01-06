@@ -1,8 +1,13 @@
 # date-tag
 
+[<img
+  src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+  width="80" height="15" alt="WTFPL" />](http://www.wtfpl.net/")
+
 The goal of this package is to create (and push) git tags that are date based. This is sometimes used to push applications that aren't "versioned" in the semver sense, but have date-based deployments.
 
 **Note: these tags are annotated tags. See the "Creating Tags" section of the [Tagging docs.](https://git-scm.com/book/en/v2/Git-Basics-Tagging)**
+
 
 ## Tag Format
 

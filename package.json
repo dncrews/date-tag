@@ -1,8 +1,7 @@
 {
   "name": "date-tag",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Create git tags that are date based and versioned for that date. e.g. v2022-01-01.1",
   "bin": {
     "date-tag": "dist/date-tag.sh"
   },
@@ -12,7 +11,10 @@
     "start": "./dist/date-tag.sh",
     "prestart": "yarn build"
   },
-  "keywords": [],
+  "keywords": [
+    "git",
+    "tagging"
+  ],
   "author": {
     "name": "Dan Crews",
     "url": "https://github.com/dncrews"
