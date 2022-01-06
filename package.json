@@ -1,6 +1,6 @@
 {
   "name": "date-tag",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create git tags that are date based and versioned for that date. e.g. v2022-01-01.1",
   "bin": {
     "date-tag": "dist/date-tag.sh"
