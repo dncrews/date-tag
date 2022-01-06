@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "./scripts/build.sh",
+    "watch": "./scripts/build.sh --watch",
     "start": "./dist/date-tag.sh",
     "prestart": "yarn build"
   },

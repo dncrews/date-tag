@@ -45,7 +45,8 @@ if $DO_PUSH_ONLY; then
   fi
 fi
 
-if [ -n $TAG_TO_PUSH ]; then
+
+if [[ "$TAG_TO_PUSH" != "" ]]; then
   tagPush "$TAG_TO_PUSH"
 fi
 
