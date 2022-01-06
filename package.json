@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "date-tag": "bin/date-tag.sh"
+    "date-tag": "dist/date-tag.sh"
+  },
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "start": "./dist/date-tag.sh",
+    "prestart": "yarn build"
   },
   "keywords": [],
   "author": {

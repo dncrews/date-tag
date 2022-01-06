@@ -1,36 +1,16 @@
 #!/usr/bin/env bash
 
+if [[ "$0" =~ "entry.sh" ]]; then
+  echo "$(tput setaf 1)$(tput bold)$(tput setab 7)ERROR:This script should not be run directly. Please use 'yarn|npm start'$(tput sgr0)"
+  exit 1
+fi
+
 # This sets our matching to case insensitive
 # https://unix.stackexchange.com/a/395686
 shopt -s nocasematch
 
-function loadDeps() {
-  FULL_PATH="$(realpath $0)"
-  __DIRNAME__="$(dirname $FULL_PATH)"
-
-  # relative source only works if you're actually in that directory
-  pushd $__DIRNAME__ > /dev/null
-  source "./functions/functions.sh"
-  popd > /dev/null
-}
-
-# https://stackoverflow.com/a/17744637/652728
-function realpath() {
-    f=$@
-    if [ -d "$f" ]; then
-        base=""
-        dir="$f"
-    else
-        base="/$(basename "$f")"
-        dir=$(dirname "$f")
-    fi
-    dir=$(cd "$dir" && /bin/pwd)
-    echo "$dir$base"
-}
-
 TAG_TO_PUSH=""
 
-loadDeps
 parseArgs "$@"
 
 debug "Date" "$DATE"
