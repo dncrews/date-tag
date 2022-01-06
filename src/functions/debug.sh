@@ -1,11 +1,4 @@
-debug() {
-  debug2 "$@"
-  # if [ -n "$DEBUG" ]; then
-  #   printf "$@ \n"
-  # fi
-}
-
-debug2() {
+function debug() {
   local name="$1"
   local value="$2"
 

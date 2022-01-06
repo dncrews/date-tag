@@ -1,6 +1,6 @@
 RECENT_TAGS=""
 
-loadRecentTags() {
+function loadRecentTags() {
   local prefix="$1"
   local date=$2
   debug "prefix" "$prefix"

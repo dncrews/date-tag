@@ -3,11 +3,12 @@ DO_CREATE_TAG=false
 # DO_PUSH=false
 PREFIX=""
 PUSH_ONLY=false
+DO_PUSH_ONLY=false
 STAGE=""
 TAG_PREFIX=""
 TODAY=""
 
-parseArgs() {
+function parseArgs() {
   TODAY="$(date +%F)"
   DATE="$(date +%F)"
 
@@ -34,6 +35,7 @@ parseArgs() {
       # STAGE="--"
       DO_CREATE_TAG=false
       # DO_PUSH=true
+      DO_PUSH_ONLY=true
       PUSH_ONLY=true
       ;;
     * )

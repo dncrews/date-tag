@@ -1,5 +1,6 @@
 pushd ./functions > /dev/null
 
+source "./chooseRecentTag.sh"
 source "./debug.sh"
 source "./getVersionNumber.sh"
 source "./loadRecentTags.sh"

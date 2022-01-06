@@ -1,7 +1,7 @@
 CREATED_TAG=""
 # TODAY="$(date +%F)"
 
-tagCreate() {
+function tagCreate() {
   local prefix="$1"
   local date="$2"
   local version="$3"
@@ -25,8 +25,9 @@ tagCreate() {
   read -n 1 input
   printf "\n\n"
   if [ "$input" != "Y" ] && [ "$input" != "y" ]; then
-    echo "OK. Thanks for playing."
-    exit 0
+    return 0
+    # echo "OK. Thanks for playing."
+    # exit 0
   fi
 
   # Create the tag
