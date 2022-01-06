@@ -2,9 +2,8 @@ VERSION_NUMBER="1"
 
 function getVersionNumber() {
   local tagPrefix="$1"
-  local date="$2"
 
-  loadRecentTags "$tagPrefix" "$date"
+  loadRecentTags "$tagPrefix"
   debug "RECENT_TAGS" "$RECENT_TAGS"
 
   if [ -z "$RECENT_TAGS" ]; then

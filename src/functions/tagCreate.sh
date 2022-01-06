@@ -1,13 +1,9 @@
 CREATED_TAG=""
-# TODAY="$(date +%F)"
 
 function tagCreate() {
   local prefix="$1"
-  local date="$2"
-  local version="$3"
-  # local previousDot="$3"
+  local version="$2"
 
-  # local nextDot="1"
   local input
 
   if [ -z "$prefix" ]; then
@@ -19,15 +15,14 @@ function tagCreate() {
     exit 1
   fi
 
-  local newTag="$prefix$date.$version"
+  local newTag="$prefix$DATE.$version"
 
   printf "Ready to create tag '$newTag'? [y/N]: "
   read -n 1 input
   printf "\n\n"
   if [ "$input" != "Y" ] && [ "$input" != "y" ]; then
+    debug "Don't Create. Input" "$input"
     return 0
-    # echo "OK. Thanks for playing."
-    # exit 0
   fi
 
   # Create the tag

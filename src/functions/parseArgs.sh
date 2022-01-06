@@ -1,6 +1,5 @@
 DATE=""
 DO_CREATE_TAG=false
-# DO_PUSH=false
 PREFIX=""
 PUSH_ONLY=false
 DO_PUSH_ONLY=false
@@ -30,11 +29,7 @@ function parseArgs() {
       DO_CREATE_TAG=true
       ;;
     "push" )
-      # PREFIX="--"
-      # TAG_PREFIX="--"
-      # STAGE="--"
       DO_CREATE_TAG=false
-      # DO_PUSH=true
       DO_PUSH_ONLY=true
       PUSH_ONLY=true
       ;;

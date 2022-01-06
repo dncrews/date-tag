@@ -1,6 +1,5 @@
 function tagPush() {
   local tagName="$1"
-  # local promptPrefix="$2"
   local input
 
   printf "Ready to Push "$tagName" or nah? P to push the tag to GitHub? [p/N]: "
@@ -11,7 +10,6 @@ function tagPush() {
   removeUnderline=$(tput rmul)
 
   printf "\n\n"
-  # if [ "$input" != "P" ] && [ "$input" != "p" ]; then
   case "$input" in
     y)
       printf "${underline}${bold}Notice: Only 'P' will push the tag to GitHub\n"
