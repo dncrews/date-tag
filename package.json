@@ -19,5 +19,13 @@
     "name": "Dan Crews",
     "url": "https://github.com/dncrews"
   },
+  "homepage": "https://github.com/dncrews/date-tag#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dncrews/date-tag/issues"
+  },
+  "bugs": {
+    "url": "https://github.com/dncrews/date-tag/issues"
+  },
   "license": "WTFPL"
 }
