@@ -1,14 +1,9 @@
 DATE=""
 DO_CREATE_TAG=false
-PREFIX=""
-PUSH_ONLY=false
 DO_PUSH_ONLY=false
-STAGE=""
 TAG_PREFIX=""
-TODAY=""
 
 function parseArgs() {
-  TODAY="$(date +%F)"
   DATE="$(date +%F)"
 
   local version="$1"
@@ -17,21 +12,16 @@ function parseArgs() {
 
   case $version in
     "rc" | "beta" | "demo")
-      PREFIX="rc-v"
       TAG_PREFIX="rc-v"
-      STAGE="Demo"
       DO_CREATE_TAG=true
       ;;
     "prod" | "full" | "release" )
-      PREFIX="v"
       TAG_PREFIX="v"
-      STAGE="Production"
       DO_CREATE_TAG=true
       ;;
     "push" )
       DO_CREATE_TAG=false
       DO_PUSH_ONLY=true
-      PUSH_ONLY=true
       ;;
     * )
       echo "Usage: release <rc | prod>"

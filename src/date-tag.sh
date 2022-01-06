@@ -28,15 +28,15 @@ function realpath() {
     echo "$dir$base"
 }
 
+TAG_TO_PUSH=""
+
 loadDeps
 parseArgs "$@"
 
-debug "Today" "$DATE"
-debug "Today" "$TODAY"
+debug "Date" "$DATE"
 debug "Do create tag" "$DO_CREATE_TAG"
-debug "P" "$PREFIX"
-debug "S" "$STAGE"
-debug "PO" "$PUSH_ONLY"
+debug "P" "$TAG_PREFIX"
+debug "PO" "$DO_PUSH_ONLY"
 
 if $DO_CREATE_TAG; then
   getVersionNumber "$TAG_PREFIX"
